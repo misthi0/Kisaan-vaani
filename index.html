@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Vaani 👨🏽‍🌾 - Farmer Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo"><i class="fas fa-seedling"></i> Kisan Vaani 👨🏽‍🌾</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#voice-search">Voice Search</a></li>
+                    <li><a href="#marketplace">Marketplace</a></li>
+                    <li><a href="#prices">Live Prices</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="farmer-image">
+                    <img src="attached_assets/image_1757427329467.png" alt="Indian Farmer" class="farmer-photo">
+                </div>
+                <h2>🌱 खेत से बाज़ार, सच्चे दाम हर बार</h2>
+                <p>🌾"From farm to plate, we bridge the gate — fair prices for farmers, never late."</p>
+                <button class="cta-btn" onclick="scrollToVoiceSearch()">
+                    <i class="fas fa-microphone"></i> Start Voice Search
+                </button>
+            </div>
+        </section>
+
+        <section id="voice-search" class="voice-section">
+            <div class="container">
+                <h2>हिंदी में आवाज़ से खोजें</h2>
+                <p>किसान जी, अपनी फसल की जानकारी हिंदी में बोलें</p>
+
+                <div class="voice-controls">
+                    <button id="startVoice" class="voice-btn">
+                        <i class="fas fa-microphone"></i>
+                        <span>बोलना शुरू करें</span>
+                    </button>
+                    <button id="stopVoice" class="voice-btn stop" disabled>
+                        <i class="fas fa-stop"></i>
+                        <span>रुकें</span>
+                    </button>
+                    <button id="toggleVoiceOutput" class="voice-btn voice-output-btn">
+                        <i class="fas fa-volume-up"></i>
+                        <span>आवाज़ में जवाब</span>
+                    </button>
+                    <button id="testVoice" class="voice-btn test-voice-btn">
+                        <i class="fas fa-play"></i>
+                        <span>आवाज़ टेस्ट करें</span>
+                    </button>
+                </div>
+
+                <div class="voice-output">
+                    <div class="hindi-text">
+                        <h3>हिंदी इनपुट:</h3>
+                        <p id="hindiText">यहाँ आपका हिंदी टेक्स्ट दिखेगा...</p>
+                    </div>
+                    <div class="english-text">
+                        <h3>अंग्रेजी अनुवाद:</h3>
+                        <p id="englishText">अंग्रेजी अनुवाद यहाँ दिखेगा...</p>
+                    </div>
+                </div>
+
+                <div class="search-results" id="searchResults">
+                    <h3>खोज परिणाम</h3>
+                    <div id="cropResults"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketplace" class="marketplace-section">
+            <div class="container">
+                <h2>Current Marketplace</h2>
+                <div class="crop-grid" id="cropGrid">
+                    <!-- Crop cards will be dynamically populated -->
+                </div>
+            </div>
+        </section>
+
+        <section id="prices" class="prices-section">
+            <div class="container">
+                <h2>Live Mandi Prices</h2>
+                <div class="state-selector">
+                    <select id="stateSelect">
+                        <option value="">Select State</option>
+                        <option value="west-bengal">West Bengal</option>
+                        <option value="telangana">Telangana</option>
+                        <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                        <option value="punjab">Punjab</option>
+                        <option value="haryana">Haryana</option>
+                        <option value="uttar-pradesh">Uttar Pradesh</option>
+                    </select>
+                </div>
+                <div class="price-grid" id="priceGrid">
+                    <!-- Price cards will be populated based on state selection -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kisan Vaani 👨🏽‍🌾. Empowering Farmers Across India</p>
+            <div class="team-info">
+                <p><strong>Team Binary Brains:</strong> Kushal, Mishti, Param, Den, Rudraksh, Manasvi</p>
+            </div>
+            <div class="contact-info">
+                <p>Helpline: 1800-XXX-XXXX | Email: support@kisanvaani.in</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
